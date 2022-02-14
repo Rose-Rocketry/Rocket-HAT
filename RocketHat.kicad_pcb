@@ -476,7 +476,7 @@
 
   (footprint "MountingHole:MountingHole_2.7mm_M2.5" (layer "F.Cu")
     (tedit 56D1B4CB) (tstamp 40d34669-c11a-4780-9dfd-6daee1dfe090)
-    (at 265.811744 147.003744)
+    (at 265.7094 147.003744)
     (descr "Mounting Hole 2.7mm, no annular, M2.5")
     (tags "mounting hole 2.7mm no annular m2.5")
     (property "Sheetfile" "RocketHat.kicad_sch")
@@ -1502,7 +1502,7 @@
   (gr_line (start 221.463344 129.172944) (end 216.535744 122.899144) (layer "F.SilkS") (width 0.15) (tstamp a76edd07-ad83-4edc-a419-0c891ba8886b))
   (gr_line (start 216.459544 107.151144) (end 221.701344 102.325144) (layer "F.SilkS") (width 0.15) (tstamp f08ff055-6472-4f8c-beb9-e9a817142dc1))
   (gr_arc (start 266.065744 93.765344) (mid 268.221005 94.658083) (end 269.113744 96.813344) (layer "Edge.Cuts") (width 0.2) (tstamp 0bc08b59-b477-45c7-ac6f-cd6ea5215553))
-  (gr_arc (start 200.863944 96.5962) (mid 201.823374 94.565601) (end 203.911944 93.739944) (layer "Edge.Cuts") (width 0.2) (tstamp 107cdf84-0883-454d-9a1f-50f772aca273))
+  (gr_arc (start 200.863944 96.5962) (mid 201.823373 94.565601) (end 203.911944 93.739944) (layer "Edge.Cuts") (width 0.2) (tstamp 107cdf84-0883-454d-9a1f-50f772aca273))
   (gr_arc (start 269.113744 149.518344) (mid 268.221005 151.673605) (end 266.065744 152.566344) (layer "Edge.Cuts") (width 0.2) (tstamp 19b90f01-4073-4074-b07c-b8c72ae430df))
   (gr_line (start 200.863944 96.5962) (end 200.863944 96.787944) (layer "Edge.Cuts") (width 0.1) (tstamp 328ab523-97d8-46ca-a5f9-fdc779f3c186))
   (gr_line (start 266.065744 93.765344) (end 203.911944 93.739944) (layer "Edge.Cuts") (width 0.2) (tstamp 46939d7d-ea9b-4345-8e64-e59a583dfc20))
