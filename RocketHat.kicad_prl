@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 50,
+    "active_layer": 31,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_nets": [],
@@ -61,8 +61,8 @@
       35,
       36
     ],
-    "visible_layers": "ffbffff_ffffffff",
-    "zone_display_mode": 1
+    "visible_layers": "0001000_80000001",
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "RocketHat.kicad_prl",
