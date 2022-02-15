@@ -2750,7 +2750,7 @@
     (property "Value" "MountingHole" (id 1) (at 93.98 177.7999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 91.44 176.53 0)
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (id 2) (at 91.44 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 91.44 176.53 0)
@@ -2799,7 +2799,7 @@
     (property "Value" "MountingHole" (id 1) (at 74.93 177.7999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.1mm" (id 2) (at 72.39 176.53 0)
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (id 2) (at 72.39 176.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 72.39 176.53 0)
@@ -3041,10 +3041,10 @@
       (reference "#PWR010") (unit 1) (value "GND") (footprint "")
     )
     (path "/9745344d-f5a4-4b56-b292-fac7f1ad12d0"
-      (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
     )
     (path "/8fae6204-f081-4a3a-877b-32ca9fce4a19"
-      (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.1mm")
+      (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
     )
     (path "/c69243ef-117d-41ea-9017-9b9ab8c0a016"
       (reference "H3") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.7mm_M2.5")
