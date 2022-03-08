@@ -23,7 +23,7 @@ class Quaternion:
         return Quaternion(nw, nx, ny, nz)
 
     def norm(self):
-        mag = (self.x^2 + self.y^2 + self.z^2 + self.w^2) ^ 0.5
+        mag = (self.x**2 + self.y**2 + self.z**2 + self.w**2) ** 0.5
         self.w = self.w / mag
         self.x = self.x / mag
         self.y = self.y / mag
