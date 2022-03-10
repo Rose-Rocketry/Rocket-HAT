@@ -100,7 +100,7 @@ while(1):
     highAccelz = int.from_bytes(highAccelz_data, 'big', signed=True)
     
 
-    accel_p = ori_q * accel_q * ~ori_q
+    # accel_p = ori_q * accel_q * ~ori_q
 
     #print(ax)
     # print([accel_p.x, accel_p.y, accel_p.z])
@@ -110,9 +110,9 @@ while(1):
     dTime = currTime - prevTime
     prevTime = currTime
 
-    velX = velX + dTime * accel_p.x
-    velY = velY + dTime * accel_p.y
-    velZ = velZ + dTime * accel_p.z
+    velX = velX + dTime * accel_q.x
+    velY = velY + dTime * accel_q.y
+    velZ = velZ + dTime * accel_q.z
 
     posX = posX + dTime * velX
     posY = posY + dTime * velY
