@@ -118,7 +118,7 @@ while(1):
     posY = posY + dTime * velY
     posZ = posZ + dTime * velZ
 
-    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) +  "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "," + str(accel_p.x) + "," + str(accel_p.y) + "," + str(accel_p.z) + "\n")
+    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) +  "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
 
 
 
