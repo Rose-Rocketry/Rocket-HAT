@@ -15,13 +15,13 @@ from datetime import datetime
 from Quaternion import Quaternion
 
 MPL_ADDR = 0x60
-H3L_ADDR = 0x18
+#H3L_ADDR = 0x18
 BNO_ADDR = 0x28
 
 MPL_P = 0x01
 MPL_CTRL_REG1 = 0x26
 
-H3L_CTRL_REG1 = 0x20
+#H3L_CTRL_REG1 = 0x20
 
 BNO_OPR_MODE = 0x3D
 BNO_OPR_MODE_NDOF = 0x0C
@@ -37,7 +37,7 @@ bus = SMBus(3)
 
 
 # Get the H3L goin
-bus.write_byte_data(H3L_ADDR, H3L_CTRL_REG1, 0x3F) # Turn the chip on, accel enabled, 1000Hz sample
+#bus.write_byte_data(H3L_ADDR, H3L_CTRL_REG1, 0x3F) # Turn the chip on, accel enabled, 1000Hz sample
 bus.write_byte_data(MPL_ADDR, MPL_CTRL_REG1, 0x81) # Turn MPL on, alt mode
 bus.write_byte_data(BNO_ADDR, BNO_OPR_MODE, BNO_OPR_MODE_IMU) # Turn BNO on
 
@@ -53,7 +53,7 @@ currTime = time.time()
 dTime = currTime - prevTime
 
 file = open("/home/pi/Rocket-HAT/datafiles/"+str(datetime.today().strftime('%Y-%m-%d_%H:%M:%S')) + ".csv", "w+")
-file.write("Time,Altitude,Rotation w,Rotation x,Rotation Y,Rotation Z,Acceleration X,Acceleration Y,Acceleration Z,High Acceleration X,High Acceleration Y,High Acceleration Z,Position X,Position Y,Position Z\n")
+file.write("Time,Altitude,Rotation w,Rotation x,Rotation Y,Rotation Z,Acceleration X,Acceleration Y,Acceleration Z,Position X,Position Y,Position Z\n")
 
 while(1):
     # for i in range(1000000):
@@ -91,13 +91,13 @@ while(1):
     qz = int.from_bytes(qz_data, 'big', signed=True) / 16384
     ori_q = Quaternion(qw, qx, qy, qz)
 
-    highAccel_data = bus.read_i2c_block_data(H3L_ADDR, 0xA8, 6)
-    highAccelx_data = [highAccel_data[1], highAccel_data[0]]
-    highAccely_data = [highAccel_data[3], highAccel_data[2]]
-    highAccelz_data = [highAccel_data[5], highAccel_data[4]]
-    highAccelx = int.from_bytes(highAccelx_data, 'big', signed=True)
-    highAccely = int.from_bytes(highAccely_data, 'big', signed=True)
-    highAccelz = int.from_bytes(highAccelz_data, 'big', signed=True)
+    #highAccel_data = bus.read_i2c_block_data(H3L_ADDR, 0xA8, 6)
+    #highAccelx_data = [highAccel_data[1], highAccel_data[0]]
+    #highAccely_data = [highAccel_data[3], highAccel_data[2]]
+    #highAccelz_data = [highAccel_data[5], highAccel_data[4]]
+    #highAccelx = int.from_bytes(highAccelx_data, 'big', signed=True)
+    #highAccely = int.from_bytes(highAccely_data, 'big', signed=True)
+    #highAccelz = int.from_bytes(highAccelz_data, 'big', signed=True)
     
 
     # accel_p = ori_q * accel_q * ~ori_q
@@ -118,7 +118,7 @@ while(1):
     posY = posY + dTime * velY
     posZ = posZ + dTime * velZ
 
-    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) +  "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
+    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
 
 
 
