@@ -52,7 +52,7 @@ prevTime = time.time()
 currTime = time.time()
 dTime = currTime - prevTime
 
-file = open("/home/pi/Rocket-HAT/datafiles/"+str(datetime.today().strftime('%Y-%m-%d_%H:%M:%S')) + ".csv", "w+")
+file = open("/home/pi/Rocket-HAT/datafiles/"+str(datetime.today().strftime('%Y-%m-%d_%H-%M-%S')) + ".csv", "w+")
 file.write("Time,Altitude,Rotation w,Rotation x,Rotation Y,Rotation Z,Acceleration X,Acceleration Y,Acceleration Z,High Acceleration X,High Acceleration Y,High Acceleration Z,Position X,Position Y,Position Z\n")
 
 while(1):
