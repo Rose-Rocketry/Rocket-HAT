@@ -26,7 +26,7 @@ H3L_CTRL_REG1 = 0x20
 BNO_OPR_MODE = 0x3D
 BNO_OPR_MODE_NDOF = 0x0C
 BNO_OPR_MODE_IMU = 0x08
-BNO_LIA_DATA = 0x28 # XYZ, LSB first, 6 bytes
+BNO_LIA_DATA = 0x08 # XYZ, LSB first, 6 bytes
 BNO_EUL_DATA = 0x1A # yaw roll pitch, Least significant register first, 6 bytes
 BNO_QUA_DATA = 0x20 # wxyz, LSB, 8 bytes
 
@@ -48,6 +48,7 @@ velX = 0
 velY = 0
 velZ = 0
 
+startTime = time.time()
 prevTime = time.time()
 currTime = time.time()
 dTime = currTime - prevTime
@@ -102,7 +103,7 @@ while(1):
 
     # accel_p = ori_q * accel_q * ~ori_q
 
-    #print(ax)
+    # print(ax)
     # print([accel_p.x, accel_p.y, accel_p.z])
     
 
@@ -118,7 +119,7 @@ while(1):
     posY = posY + dTime * velY
     posZ = posZ + dTime * velZ
 
-    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) + "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
+    file.write(str(currTime-startTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) + "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
 
 
 
