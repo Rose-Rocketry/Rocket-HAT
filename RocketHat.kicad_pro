@@ -378,7 +378,9 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "3V3",
-        "nets": [],
+        "nets": [
+          "/3V3"
+        ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.35,
@@ -396,7 +398,10 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "5V",
-        "nets": [],
+        "nets": [
+          "/P5V_HAT",
+          "Net-(J1-Pad1)"
+        ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.45,
