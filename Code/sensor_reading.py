@@ -7,7 +7,7 @@ import adafruit_bno055
 import adafruit_lis331
 import adafruit_mpl3115a2
 
-i2c = board.I2C()
+i2c = board.I2C(19, 20)
 bno = adafruit_bno055.BNO055_I2C(i2c, address = )
 lis = adafruit_lis331.H3LIS331(i2c, address = )
 mpl = adafruit_mpl3115a2.MPL3115A2(i2c, address = )
