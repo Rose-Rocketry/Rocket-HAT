@@ -26,7 +26,7 @@ H3L_CTRL_REG1 = 0x20
 BNO_OPR_MODE = 0x3D
 BNO_OPR_MODE_NDOF = 0x0C
 BNO_OPR_MODE_IMU = 0x08
-BNO_LIA_DATA = 0x28 # XYZ, LSB first, 6 bytes
+BNO_LIA_DATA = 0x08 # XYZ, LSB first, 6 bytes
 BNO_EUL_DATA = 0x1A # yaw roll pitch, Least significant register first, 6 bytes
 BNO_QUA_DATA = 0x20 # wxyz, LSB, 8 bytes
 
@@ -48,12 +48,13 @@ velX = 0
 velY = 0
 velZ = 0
 
+startTime = time.time()
 prevTime = time.time()
 currTime = time.time()
 dTime = currTime - prevTime
 
 file = open("/home/pi/Rocket-HAT/datafiles/"+str(datetime.today().strftime('%Y-%m-%d_%H-%M-%S')) + ".csv", "w+")
-file.write("Time,Altitude,Rotation w,Rotation x,Rotation Y,Rotation Z,Acceleration X,Acceleration Y,Acceleration Z,High Acceleration X,High Acceleration Y,High Acceleration Z,Position X,Position Y,Position Z\n")
+file.write("Time,Altitude,Rotation w,Rotation x,Rotation Y,Rotation Z,Acceleration Qw,Acceleration Qx,Acceleration Qy,Acceleration Qz,Acceleration X,Acceleration Y,Acceleration Z,High Acceleration X,High Acceleration Y,High Acceleration Z,Position X,Position Y,Position Z\n")
 
 while(1):
     # for i in range(1000000):
@@ -100,25 +101,25 @@ while(1):
     highAccelz = int.from_bytes(highAccelz_data, 'big', signed=True)
     
 
-    # accel_p = ori_q * accel_q * ~ori_q
+    accel_p = ori_q * accel_q * ~ori_q
 
     #print(ax)
-    # print([accel_p.x, accel_p.y, accel_p.z])
+    #print(accel_p.x)
     
 
     currTime = time.time()
     dTime = currTime - prevTime
     prevTime = currTime
 
-    velX = velX + dTime * accel_q.x
-    velY = velY + dTime * accel_q.y
-    velZ = velZ + dTime * accel_q.z
+    velX = velX + dTime * accel_p.x
+    velY = velY + dTime * accel_p.y
+    velZ = velZ + dTime * accel_p.z
 
     posX = posX + dTime * velX
     posY = posY + dTime * velY
     posZ = posZ + dTime * velZ
 
-    file.write(str(currTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) + "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
+    file.write(str(currTime-startTime) + "," + str(altitude) + "," + str(qw) + "," + str(qx) + "," + str(qy) + "," + str(qz) + "," + str(accel_p.w) + "," + str(accel_p.x) + "," + str(accel_p.y) + "," + str(accel_p.z) + "," + str(accelx) + "," + str(accely) + "," + str(accelz) + "," + str(highAccelx) + "," + str(highAccely) + "," + str(highAccelz) + "," + str(posX) + "," + str(posY) + "," + str(posZ) + "\n")
 
 
 
