@@ -19,7 +19,7 @@ class Quaternion:
         nw = self.w*b.w - self.x*b.x - self.y*b.y - self.z*b.z
         nx = self.w*b.x + self.x*b.w + self.y*b.z - self.z*b.y
         ny = self.w*b.y + self.y*b.w + self.z*b.x - self.x*b.z
-        nz = self.w*b.z + self.z*b.w + self.x*b.y - self.y*b.z
+        nz = self.w*b.z + self.z*b.w + self.x*b.y - self.y*b.x
         return Quaternion(nw, nx, ny, nz)
 
     def norm(self):
