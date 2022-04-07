@@ -24,3 +24,8 @@ _autosave-*
 *.xml
 *.csv
 RocketHat.xlsx
+
+**/Code/pi/.cache/*
+**/Code/pi/.config/*
+**/Code/pi/.vscode-server/*
+Code/pi/fcdproplus/gr-fcdproplus/
