@@ -7,7 +7,7 @@
   (title_block
     (title "Rocket IMU / Radio Sensor Hat")
     (date "2022-03-18")
-    (rev "v1.1")
+    (rev "v1.1.1")
     (company "Rose-Hulman Rocketry Team")
     (comment 2 "https://creativecommons.org/licenses/by-sa/4.0/")
     (comment 3 "License: CC BY-SA 4.0")
