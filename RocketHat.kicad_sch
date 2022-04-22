@@ -1525,7 +1525,6 @@
     )
   )
 
-
   (junction (at 155.575 26.67) (diameter 0) (color 0 0 0 0)
     (uuid 3835cd5e-3848-43fe-8eed-5c13e79f6304)
   )
@@ -2566,7 +2565,7 @@
     (property "Value" "10k" (id 1) (at 146.05 46.3549 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (id 2) (at 144.145 45.085 0)
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" (id 2) (at 144.145 45.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 144.145 45.085 0)
@@ -2953,7 +2952,7 @@
     (property "Value" "SolderJumper_2_Bridged" (id 1) (at 158.115 46.9899 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (id 2) (at 155.575 45.72 0)
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" (id 2) (at 155.575 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 155.575 45.72 0)
@@ -3023,7 +3022,7 @@
     (property "Value" "Buzzer" (id 1) (at 97.7899 35.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 93.98 40.005 90)
+    (property "Footprint" "Buzzer_Beeper:Buzzer_12x9.5RM7.6" (id 2) (at 93.98 40.005 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 93.98 40.005 90)
@@ -3167,7 +3166,7 @@
       (reference "#PWR09") (unit 1) (value "GND") (footprint "")
     )
     (path "/c57f216c-7b95-490c-b05d-64f57cf2aecb"
-      (reference "BZ1") (unit 1) (value "Buzzer") (footprint "")
+      (reference "BZ1") (unit 1) (value "Buzzer") (footprint "Buzzer_Beeper:Buzzer_12x9.5RM7.6")
     )
     (path "/9745344d-f5a4-4b56-b292-fac7f1ad12d0"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
@@ -3215,7 +3214,7 @@
       (reference "J10") (unit 1) (value "Raspberry_Pi_2_3") (footprint "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical")
     )
     (path "/aea75ec5-5279-4d47-ab09-573ae0a4819b"
-      (reference "JP1") (unit 1) (value "SolderJumper_2_Bridged") (footprint "")
+      (reference "JP1") (unit 1) (value "SolderJumper_2_Bridged") (footprint "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm")
     )
     (path "/12b843c4-0c50-4529-b30c-b86b981e29d2"
       (reference "JP2") (unit 1) (value "SolderJumper_2_Open") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
@@ -3224,7 +3223,7 @@
       (reference "Q1") (unit 1) (value "FQP27P06") (footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
     )
     (path "/34cb238f-e443-47f6-b9b2-74106430007a"
-      (reference "R1") (unit 1) (value "10k") (footprint "")
+      (reference "R1") (unit 1) (value "10k") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
     )
     (path "/371e2c35-1dd3-4ab9-a165-5756dbc0abde"
       (reference "R2") (unit 1) (value "10K") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
